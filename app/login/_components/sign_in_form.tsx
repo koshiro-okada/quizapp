@@ -3,7 +3,7 @@
 import { Input } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
 import { useActionState, useEffect } from "react";
-import { signIn } from "../actions";
+import { signIn } from "@/app/login/actions";
 import { useSearchParams } from "next/navigation";
 
 export default function SignInForm() {
