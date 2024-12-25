@@ -1,6 +1,6 @@
 "use server";
 
-import { signIn as _signIn, auth } from "../../auth";
+import { signIn as _signIn, auth } from "@/auth";
 import { isRedirectError } from "next/dist/client/components/redirect";
 
 export type SignInState = {
