@@ -1,4 +1,4 @@
-import "../styles/global.css";
+import "@/styles/global.css";
 import { NextUIProvider } from "@nextui-org/react";
 
 export default function RootLayout({
