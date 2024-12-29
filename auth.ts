@@ -1,14 +1,8 @@
 import NextAuth from "next-auth";
 import { authConfig } from "@/auth.config";
-import Line from "next-auth/providers/line";
+import Google from "next-auth/providers/google";
 
 export const { auth, signIn, signOut, handlers } = NextAuth({
   ...authConfig,
-  providers: [
-    Line({
-      clientId: process.env.AUTH_LINE_ID,
-      clientSecret: process.env.AUTH_LINE_SECRET,
-      checks: ["state"],
-    }),
-  ],
+  providers: [Google],
 });
