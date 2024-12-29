@@ -1,4 +1,4 @@
-import SignOutButton from "@/app/login/_components/sign_out_button";
+import SignOutButton from "@/app/signin/_components/sign_out_button";
 import { auth } from "@/auth";
 
 export default async function TopPage() {
