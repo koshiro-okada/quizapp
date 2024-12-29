@@ -8,7 +8,7 @@ export const authConfig = {
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
-      const isOnSignInPage = nextUrl.pathname.startsWith("/singin");
+      const isOnSignInPage = nextUrl.pathname.startsWith("/signin");
       if (isOnSignInPage && isLoggedIn) {
         return NextResponse.redirect(new URL("/auth/top", nextUrl));
       }
