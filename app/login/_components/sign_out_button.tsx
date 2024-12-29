@@ -1,12 +1,10 @@
-"use client";
-
-import { signOut } from "@/app/login/actions";
+import { signOut } from "@/auth";
 
 export default function SignOutButton() {
   return (
     <button
-      color="primary"
       onClick={async () => {
+        "use server";
         await signOut();
       }}
     >
