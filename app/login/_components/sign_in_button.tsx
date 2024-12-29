@@ -2,7 +2,7 @@
 
 import { signIn } from "@/app/login/actions";
 
-export default function SignInButton() {
+export default function SignInViaLINEButton() {
   return (
     <button
       color="primary"
@@ -10,7 +10,7 @@ export default function SignInButton() {
         await signIn();
       }}
     >
-      サインイン
+      LINE でサインイン
     </button>
   );
 }
