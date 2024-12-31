@@ -3,13 +3,13 @@ import { NextResponse } from "next/server";
 
 export const authConfig = {
   pages: {
-    signIn: "/login",
+    signIn: "/signin",
   },
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
-      const isOnLoginPage = nextUrl.pathname.startsWith("/login");
-      if (isOnLoginPage && isLoggedIn) {
+      const isOnSignInPage = nextUrl.pathname.startsWith("/signin");
+      if (isOnSignInPage && isLoggedIn) {
         return NextResponse.redirect(new URL("/auth/top", nextUrl));
       }
       return isLoggedIn;
