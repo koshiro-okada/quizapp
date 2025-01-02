@@ -1,4 +1,5 @@
 import { signIn } from "@/auth";
+import Image from "next/image";
 
 export default function SignInViaGoogleButton({
   redirectTo,
@@ -12,7 +13,12 @@ export default function SignInViaGoogleButton({
         await signIn("google", { redirectTo });
       }}
     >
-      Google でサインイン
+      <Image
+        src="/assets/google.svg"
+        height={40}
+        width={183}
+        alt="google-signin-button"
+      />
     </button>
   );
 }
