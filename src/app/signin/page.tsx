@@ -12,7 +12,7 @@ export default async function SignInPage({
   const redirectPath = extractRedirectPathFromCallbackUrl(params.callbackUrl);
   return (
     <div>
-      <div className="flex flex-col items-center gap-4 rounded-md border p-4 m-4">
+      <div className="flex flex-col items-center gap-4 rounded-lg border p-4 m-4 bg-white">
         <h1 className="font-bold">{stringResources.systemName}</h1>
         <span>{stringResources.signInWithGoogle}</span>
         <SignInViaGoogleButton redirectTo={redirectPath} />
